@@ -61,6 +61,7 @@ public class ExampleCommandTrigger {
             // set the URI of this event, complete with label which uniquely identifies the type of
             // triggered vehicle event, and UUID for this specific event.
                 //add something to test git
+                //test push in local git in master branch
             .setId("aui:edge:vehicle:event:" + UUID.randomUUID().toString())
             // Include the time of day when this event occurred.
             .setTimestamp(Timestamp.newBuilder()
