@@ -63,6 +63,8 @@ public class ExampleCommandTrigger {
                 //add something to test git
                 //test push in local git in master branch
                 //add something to test git / add sth in gittest branch
+                //add something to test git
+                //test push in local git in master branch
             .setId("aui:edge:vehicle:event:" + UUID.randomUUID().toString())
             // Include the time of day when this event occurred.
             .setTimestamp(Timestamp.newBuilder()
