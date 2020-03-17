@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Edge Client Java Examples
 
 ## Copyright Statement
@@ -51,3 +52,10 @@ The example code does not implement a graceful termination, retries, and channel
 
 **This client is example code and is not production quality.  Do not copy this code into production code.**
 ***You must update this code to meet your security needs.***
+=======
+# first
+
+this is not the first
+
+hhha
+>>>>>>> 2ac80567ede1215a8c1dd125ed14bc776e829c16
