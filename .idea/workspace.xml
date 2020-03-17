@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0b0b3de-0039-47f2-b9e2-dad85f07fc77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/edge/src/main/java/com/autonomic/example/edge/ExampleCommandTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/edge/src/main/java/com/autonomic/example/edge/ExampleCommandTrigger.java" afterDir="false" />
-    </list>
+    <list default="true" id="f0b0b3de-0039-47f2-b9e2-dad85f07fc77" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/au-protos/.gradle/" />
@@ -100,8 +98,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edge/src/main/java/com/autonomic/example/edge/ExampleCommandTrigger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="286">
+              <caret line="62" column="43" lean-forward="true" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1109,8 +1107,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/edge/src/main/java/com/autonomic/example/edge/ExampleCommandTrigger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        <state relative-caret-position="286">
+          <caret line="62" column="43" lean-forward="true" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
