@@ -1,0 +1,75 @@
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+// Autonomic Proprietary 1.0
+// ——————————————————————————————————————————————————————————————————————————————
+// Copyright (C) 2018 Autonomic, LLC - All rights reserved
+// ——————————————————————————————————————————————————————————————————————————————
+// Proprietary and confidential.
+//
+// NOTICE:  All information contained herein is, and remains the property of
+// Autonomic, LLC and its suppliers, if any.  The intellectual and technical
+// concepts contained herein are proprietary to Autonomic, LLC and its suppliers
+// and may be covered by U.S. and Foreign Patents, patents in process, and are
+// protected by trade secret or copyright law. Dissemination of this information
+// or reproduction of this material is strictly forbidden unless prior written
+// permission is obtained from Autonomic, LLC.
+//
+// Unauthorized copy of this file, via any medium is strictly prohibited.
+// ______________________________________________________________________________
+
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        maven {
+            // The google mirror is less flaky than mavenCentral()
+            url "https://maven-central.storage-download.googleapis.com/repos/central/data/"
+        }
+    }
+    dependencies {
+        // ASSUMES GRADLE 2.12 OR HIGHER. Use plugin version 0.7.5 with earlier
+        // gradle versions
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.3'
+    }
+}
+
+repositories {
+    maven {
+        // The google mirror is less flaky than mavenCentral()
+        url "https://maven-central.storage-download.googleapis.com/repos/central/data/"
+    }
+    mavenLocal()
+}
+
+def grpcVersion = '1.8.0' // CURRENT_GRPC_VERSION
+
+def nettyTcNativeVersion = '2.0.6.Final'
+
+dependencies {
+    compile project(':au-protos')
+    compile "io.grpc:grpc-netty:${grpcVersion}"
+    compile "io.grpc:grpc-protobuf:${grpcVersion}"
+    compile "io.grpc:grpc-stub:${grpcVersion}"
+    compile "io.netty:netty-tcnative-boringssl-static:${nettyTcNativeVersion}"
+    compile ('com.google.api-client:google-api-client:1.23.0') {
+        exclude group: 'com.google.guava', module: 'guava-jdk5'
+    }
+
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+
+    testCompile "io.grpc:grpc-testing:${grpcVersion}"
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:1.9.5"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.autonomic.example.edge.ExamplePublishClient'
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+// Generate IntelliJ IDEA's .idea & .iml project files
+apply plugin: 'idea'
